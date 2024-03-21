@@ -1,0 +1,135 @@
+body {
+    background-color: #375e81;
+}
+
+.bg-secondary{
+    background-color: #3a668e(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+.carusel__wrapper {
+    height: 600px;
+    img{
+        height: 800px;
+        object-fit: cover;
+    }
+}
+.movie__list {
+    margin-top: 210px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    margin-top: 10px;
+    background-color: #6c757d;
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+.btn {
+    align-items: center;
+    padding: 11px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.btn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    0% {background-position: 0 0;}
+}
+
+.form-control {
+    transition: all 0.3s;
+    height: 45px;
+    background-color: #375e81;
+}
+.form-control:hover {
+    background-color: lightblue;
+    border-color: blue;
+}
+.form-control.focused {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+.form-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+  @keyframes changeColor {
+    0% { background-color: white; }
+    50% { background-color: yellow; }
+    100% { background-color: white; }
+  }
+  .animated {
+    animation: changeColor 2s infinite;
+  }
+  
+  
+
+.btn:hover::before{
+    opacity: 1;
+}
+
+.btn:active::after{
+    background: transparent;
+}
+.btn:active{
+    color: #000;
+    font-weight: bold;
+}
+
+.card-img {
+    width: 200px;
+    height: 200px;
+}
+.bi-x-lg::before{
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 24px;
+}
+.bi-heart::before {
+    cursor: pointer;
+}
